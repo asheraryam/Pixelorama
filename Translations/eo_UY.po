@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Esperanto\n"
 "Language: eo_UY\n"
-"PO-Revision-Date: 2021-03-17 17:36\n"
+"PO-Revision-Date: 2021-06-29 21:11\n"
 
 msgid "OK"
 msgstr "Bone"
@@ -30,6 +30,9 @@ msgstr "Bonvolu konfirmu..."
 msgid "File Name:"
 msgstr ""
 
+msgid "Project Name:"
+msgstr ""
+
 msgid "Image Size"
 msgstr "Mezuro de bildo"
 
@@ -37,6 +40,9 @@ msgid "Canvas Size"
 msgstr ""
 
 msgid "Frame Size"
+msgstr ""
+
+msgid "Size:"
 msgstr ""
 
 msgid "Width:"
@@ -53,6 +59,9 @@ msgstr "Dosiero"
 
 msgid "Edit"
 msgstr "Redakti"
+
+msgid "Select"
+msgstr ""
 
 msgid "View"
 msgstr "Montri"
@@ -123,6 +132,9 @@ msgstr ""
 msgid "Delete"
 msgstr "Forigi"
 
+msgid "New Brush"
+msgstr ""
+
 msgid "Scale Image"
 msgstr "Skali bildon"
 
@@ -144,8 +156,11 @@ msgstr ""
 msgid "Rotate Image"
 msgstr "Turni bildon"
 
-msgid "Clear Selection"
-msgstr "Purigi emfazon"
+msgid "Clear"
+msgstr ""
+
+msgid "Invert"
+msgstr ""
 
 msgid "Flip"
 msgstr ""
@@ -253,6 +268,12 @@ msgid "Vertical frames:"
 msgstr ""
 
 msgid "Start frame:"
+msgstr ""
+
+msgid "At frame:"
+msgstr ""
+
+msgid "At layer:"
 msgstr ""
 
 msgid "Brush type:"
@@ -413,6 +434,9 @@ msgstr "Temoj"
 msgid "Canvas"
 msgstr "Kanvaso"
 
+msgid "Selection"
+msgstr ""
+
 msgid "Shortcuts"
 msgstr ""
 
@@ -479,7 +503,28 @@ msgstr "Hela"
 msgid "Purple"
 msgstr ""
 
+msgid "Theme"
+msgstr ""
+
+msgid "Icon color from:"
+msgstr ""
+
+msgid "Icon color:"
+msgstr ""
+
+msgid "Tool button size:"
+msgstr ""
+
+msgid "Small"
+msgstr ""
+
+msgid "Big"
+msgstr ""
+
 msgid "Only affect selection"
+msgstr ""
+
+msgid "Selected cels"
 msgstr ""
 
 msgid "Current cel"
@@ -668,7 +713,7 @@ msgstr ""
 msgid "Turkish"
 msgstr ""
 
-msgid "Norwegian"
+msgid "Norwegian Bokmål"
 msgstr ""
 
 msgid "Korean"
@@ -681,6 +726,9 @@ msgid "Romanian"
 msgstr ""
 
 msgid "Japanese"
+msgstr ""
+
+msgid "Ukrainian"
 msgstr ""
 
 msgid "Development Team"
@@ -728,13 +776,40 @@ msgstr "Konservi kaj eliri"
 msgid "Exit without saving"
 msgstr "Eliri sen konservado"
 
-msgid "Utility Tools"
-msgstr "Utililoj"
-
 msgid "Rectangular Selection\n\n"
 "%s for left mouse button\n"
-"%s for right mouse button\n\n"
-"Press %s to move the content"
+"%s for right mouse button"
+msgstr ""
+
+msgid "Elliptical Selection\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr ""
+
+msgid "Polygonal Selection\n"
+"Double-click to connect the last point to the starting point\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr ""
+
+msgid "Select By Color\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr ""
+
+msgid "Magic Wand\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr ""
+
+msgid "Lasso / Free Select Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr ""
+
+msgid "Move\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
 msgstr ""
 
 msgid "Zoom\n\n"
@@ -753,9 +828,6 @@ msgid "Color Picker\n"
 "%s for right mouse button"
 msgstr ""
 
-msgid "Draw Tools"
-msgstr "Pentriloj"
-
 msgid "Pencil\n\n"
 "%s for left mouse button\n"
 "%s for right mouse button\n\n"
@@ -773,9 +845,39 @@ msgid "Bucket\n\n"
 "%s for right mouse button"
 msgstr ""
 
-msgid "Lighten/Darken\n\n"
+msgid "Shading Tool\n\n"
 "%s for left mouse button\n"
 "%s for right mouse button"
+msgstr ""
+
+msgid "Line Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to snap the angle of the line\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin"
+msgstr ""
+
+msgid "Rectangle Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to create a 1:1 shape\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin"
+msgstr ""
+
+msgid "Ellipse Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to create a 1:1 shape\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin"
+msgstr ""
+
+msgid "Rectangle"
+msgstr ""
+
+msgid "Ellipse"
 msgstr ""
 
 msgid "Choose a color for the left tool"
@@ -944,6 +1046,15 @@ msgstr ""
 msgid "The transparent checker follow the zoom level of canvas"
 msgstr ""
 
+msgid "Animated selection borders"
+msgstr ""
+
+msgid "Border color 1:"
+msgstr ""
+
+msgid "Border color 2:"
+msgstr ""
+
 msgid "Only custom preset can be modified"
 msgstr ""
 
@@ -989,7 +1100,16 @@ msgstr ""
 msgid "Pixel Perfect"
 msgstr ""
 
+msgid "Fill inside"
+msgstr ""
+
 msgid "Makes lines smooth by removing the extra pixels on the edges"
+msgstr ""
+
+msgid "Fill Shape"
+msgstr ""
+
+msgid "Fills the drawn shape with color, instead of drawing a hollow shape"
 msgstr ""
 
 msgid "Brush color from"
@@ -1466,6 +1586,24 @@ msgstr ""
 msgid "Rectangular Selection"
 msgstr ""
 
+msgid "Elliptical Selection"
+msgstr ""
+
+msgid "Polygonal Selection"
+msgstr ""
+
+msgid "Select By Color"
+msgstr ""
+
+msgid "Magic Wand"
+msgstr ""
+
+msgid "Lasso / Free Select Tool"
+msgstr ""
+
+msgid "Move"
+msgstr ""
+
 msgid "Zoom"
 msgstr ""
 
@@ -1484,8 +1622,17 @@ msgstr "Skrapileto"
 msgid "Bucket"
 msgstr ""
 
-msgid "Lighten/Darken"
-msgstr "Lumigi/Mallumigi"
+msgid "Shading Tool"
+msgstr ""
+
+msgid "Line Tool"
+msgstr ""
+
+msgid "Rectangle Tool"
+msgstr ""
+
+msgid "Ellipse Tool"
+msgstr ""
 
 msgid "Switch Colors"
 msgstr "Interŝanĝi kolorojn"
@@ -1594,5 +1741,38 @@ msgid "Tiled In X Axis"
 msgstr ""
 
 msgid "Tiled In Y Axis"
+msgstr ""
+
+msgid "Create a new palette"
+msgstr ""
+
+msgid "Comment:"
+msgstr ""
+
+msgid "Empty"
+msgstr ""
+
+msgid "From Current Palette"
+msgstr ""
+
+msgid "From Current Sprite"
+msgstr ""
+
+msgid "From Current Selection"
+msgstr ""
+
+msgid "Add a new color"
+msgstr ""
+
+msgid "Remove a selected color"
+msgstr ""
+
+msgid "Palette with the same name and path already exists!"
+msgstr ""
+
+msgid "Palette name is required!"
+msgstr ""
+
+msgid "Reducing palette size will reset positions of colors. Colors that don't fit in new palette size will be lost!"
 msgstr ""
 

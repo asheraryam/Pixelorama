@@ -2,7 +2,7 @@ extends Panel
 
 
 enum FileMenuId {NEW, OPEN, OPEN_LAST_PROJECT, SAVE, SAVE_AS, EXPORT, EXPORT_AS, QUIT}
-enum EditMenuId {UNDO, REDO, COPY, CUT, PASTE, DELETE, PREFERENCES}
+enum EditMenuId {UNDO, REDO, COPY, CUT, PASTE, DELETE, NEW_BRUSH, PREFERENCES}
 enum ViewMenuId {TILE_MODE, WINDOW_TRANSPARENCY, PANEL_LAYOUT, MIRROR_VIEW, SHOW_GRID, SHOW_PIXEL_GRID, SHOW_RULERS, SHOW_GUIDES, SHOW_ANIMATION_TIMELINE, ZEN_MODE, FULLSCREEN_MODE}
 enum ImageMenuId {SCALE_IMAGE, CENTRALIZE_IMAGE, CROP_IMAGE, RESIZE_CANVAS, FLIP, ROTATE, INVERT_COLORS, DESATURATION, OUTLINE, HSV, GRADIENT, SHADER}
 enum SelectMenuId {SELECT_ALL, CLEAR_SELECTION, INVERT}
@@ -81,6 +81,7 @@ func setup_edit_menu() -> void:
 		"Cut" : InputMap.get_action_list("cut")[0].get_scancode_with_modifiers(),
 		"Paste" : InputMap.get_action_list("paste")[0].get_scancode_with_modifiers(),
 		"Delete" : InputMap.get_action_list("delete")[0].get_scancode_with_modifiers(),
+		"New Brush" : InputMap.get_action_list("new_brush")[0].get_scancode_with_modifiers(),
 		"Preferences" : 0
 		}
 	var edit_menu : PopupMenu = edit_menu_button.get_popup()
@@ -176,8 +177,8 @@ func setup_image_menu() -> void:
 
 func setup_select_menu() -> void:
 	var select_menu_items := { # order as in EditMenuId enum
-		"Select All" : InputMap.get_action_list("select_all")[0].get_scancode_with_modifiers(),
-		"Clear Selection" : InputMap.get_action_list("clear_selection")[0].get_scancode_with_modifiers(),
+		"All" : InputMap.get_action_list("select_all")[0].get_scancode_with_modifiers(),
+		"Clear" : InputMap.get_action_list("clear_selection")[0].get_scancode_with_modifiers(),
 		"Invert" : InputMap.get_action_list("invert_selection")[0].get_scancode_with_modifiers(),
 		}
 	var select_menu : PopupMenu = select_menu_button.get_popup()
@@ -259,8 +260,10 @@ func save_project_file() -> void:
 	if path == "":
 		if OS.get_name() == "HTML5":
 			Global.save_sprites_html5_dialog.popup_centered()
+			Global.save_sprites_html5_dialog.get_node("FileNameContainer/FileNameLineEdit").text = Global.current_project.name
 		else:
 			Global.save_sprites_dialog.popup_centered()
+			Global.save_sprites_dialog.current_file = Global.current_project.name
 		Global.dialog_open(true)
 	else:
 		Global.control._on_SaveSprite_file_selected(path)
@@ -270,8 +273,10 @@ func save_project_file_as() -> void:
 	Global.control.is_quitting_on_save = false
 	if OS.get_name() == "HTML5":
 		Global.save_sprites_html5_dialog.popup_centered()
+		Global.save_sprites_html5_dialog.get_node("FileNameContainer/FileNameLineEdit").text = Global.current_project.name
 	else:
 		Global.save_sprites_dialog.popup_centered()
+		Global.save_sprites_dialog.current_file = Global.current_project.name
 	Global.dialog_open(true)
 
 
@@ -301,6 +306,8 @@ func edit_menu_id_pressed(id : int) -> void:
 			Global.canvas.selection.paste()
 		EditMenuId.DELETE:
 			Global.canvas.selection.delete()
+		EditMenuId.NEW_BRUSH:
+			Global.canvas.selection.new_brush()
 		EditMenuId.PREFERENCES:
 			Global.preferences_dialog.popup_centered(Vector2(400, 280))
 			Global.dialog_open(true)
@@ -360,7 +367,7 @@ func window_transparency(value :float) -> void:
 		get_node("../../AlternateTransparentBackground").visible = false
 	else:
 		get_node("../../AlternateTransparentBackground").visible = true
-	var checker :ColorRect = get_parent().get_node("UI/CanvasAndTimeline/ViewportAndRulers/HSplitContainer/ViewportandVerticalRuler/ViewportContainer/Viewport/TransparentChecker")
+	var checker :ColorRect = get_parent().get_node("UI/ToolsAndCanvas/CanvasAndTimeline/ViewportAndRulers/HSplitContainer/ViewportandVerticalRuler/ViewportContainer/Viewport/TransparentChecker")
 	var color :Color = Global.control.theme.get_stylebox("panel", "PanelContainer").bg_color
 	color.a = value
 	get_node("../../AlternateTransparentBackground").color = color
@@ -424,6 +431,7 @@ func toggle_zen_mode() -> void:
 	Global.tool_panel.visible = zen_mode
 	Global.right_panel.visible = zen_mode
 	Global.tabs_container.visible = zen_mode
+	Global.control.tallscreen_hsplit_container.visible = zen_mode
 	zen_mode = !zen_mode
 	view_menu.set_item_checked(ViewMenuId.ZEN_MODE, zen_mode)
 
@@ -437,7 +445,6 @@ func toggle_fullscreen() -> void:
 
 
 func image_menu_id_pressed(id : int) -> void:
-	var image : Image = Global.current_project.frames[Global.current_project.current_frame].cels[Global.current_project.current_layer].image
 	match id:
 		ImageMenuId.SCALE_IMAGE:
 			show_scale_image_popup()
@@ -446,7 +453,7 @@ func image_menu_id_pressed(id : int) -> void:
 			DrawingAlgos.centralize()
 
 		ImageMenuId.CROP_IMAGE:
-			DrawingAlgos.crop_image(image)
+			DrawingAlgos.crop_image()
 
 		ImageMenuId.RESIZE_CANVAS:
 			show_resize_canvas_popup()
@@ -526,11 +533,7 @@ func help_menu_id_pressed(id : int) -> void:
 		HelpMenuId.ISSUE_TRACKER:
 			OS.shell_open("https://github.com/Orama-Interactive/Pixelorama/issues")
 		HelpMenuId.CHANGELOG:
-			if OS.get_name() == "OSX":
-				# Issue #275 - remove when macOS builds use Godot 3.2.3
-				OS.shell_open("https://github.com/Orama-Interactive/Pixelorama/blob/master/CHANGELOG.md")
-			else:
-				OS.shell_open("https://github.com/Orama-Interactive/Pixelorama/blob/master/CHANGELOG.md#v082---2020-12-12")
+			OS.shell_open("https://github.com/Orama-Interactive/Pixelorama/blob/master/CHANGELOG.md#v083---2021-05-04")
 		HelpMenuId.ABOUT_PIXELORAMA:
 			Global.control.get_node("Dialogs/AboutDialog").popup_centered()
 			Global.dialog_open(true)

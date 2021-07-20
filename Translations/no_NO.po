@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Norwegian\n"
 "Language: no_NO\n"
-"PO-Revision-Date: 2021-03-17 17:35\n"
+"PO-Revision-Date: 2021-06-04 18:55\n"
 
 msgid "OK"
 msgstr "OK"
@@ -30,6 +30,9 @@ msgstr "Vennligst Bekreft..."
 msgid "File Name:"
 msgstr "Filnavn:"
 
+msgid "Project Name:"
+msgstr ""
+
 msgid "Image Size"
 msgstr "Bildestørrelse"
 
@@ -38,6 +41,9 @@ msgstr "Lerretstørrelse"
 
 msgid "Frame Size"
 msgstr "Bildestørrelse"
+
+msgid "Size:"
+msgstr ""
 
 msgid "Width:"
 msgstr "Bredde:"
@@ -123,6 +129,9 @@ msgstr "Lim inn"
 msgid "Delete"
 msgstr "Slett"
 
+msgid "New Brush"
+msgstr ""
+
 msgid "Scale Image"
 msgstr "Skalér Bilde"
 
@@ -144,8 +153,11 @@ msgstr ""
 msgid "Rotate Image"
 msgstr "Rotér Bilde"
 
-msgid "Clear Selection"
-msgstr "Fjern Merking"
+msgid "Clear"
+msgstr ""
+
+msgid "Invert"
+msgstr ""
 
 msgid "Flip"
 msgstr "Vend"
@@ -253,6 +265,12 @@ msgid "Vertical frames:"
 msgstr "Vertikale bilder:"
 
 msgid "Start frame:"
+msgstr ""
+
+msgid "At frame:"
+msgstr ""
+
+msgid "At layer:"
 msgstr ""
 
 msgid "Brush type:"
@@ -412,6 +430,9 @@ msgstr "Temaer"
 msgid "Canvas"
 msgstr "Lerret"
 
+msgid "Selection"
+msgstr ""
+
 msgid "Shortcuts"
 msgstr "Snarveier"
 
@@ -476,6 +497,15 @@ msgid "Light"
 msgstr "Lys"
 
 msgid "Purple"
+msgstr ""
+
+msgid "Theme"
+msgstr ""
+
+msgid "Icon color from:"
+msgstr ""
+
+msgid "Icon color:"
 msgstr ""
 
 msgid "Only affect selection"
@@ -788,12 +818,40 @@ msgstr "Bøtte\n\n"
 "%s for venstre museknapp\n"
 "%s for høyre museknapp"
 
-msgid "Lighten/Darken\n\n"
+msgid "Shading Tool\n\n"
 "%s for left mouse button\n"
 "%s for right mouse button"
-msgstr "Lys opp/Formørk\n\n"
-"%s for venstre museknapp\n"
-"%s for høyre museknapp"
+msgstr ""
+
+msgid "Line Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to snap the angle of the line\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin\n"
+msgstr ""
+
+msgid "Rectangle Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to create a 1:1 shape\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin\n"
+msgstr ""
+
+msgid "Ellipse Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to create a 1:1 shape\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin\n"
+msgstr ""
+
+msgid "Rectangle"
+msgstr ""
+
+msgid "Ellipse"
+msgstr ""
 
 msgid "Choose a color for the left tool"
 msgstr "Velg en farge for venstre verktøy"
@@ -962,6 +1020,15 @@ msgstr "Følg lerretets forstørrelse"
 msgid "The transparent checker follow the zoom level of canvas"
 msgstr ""
 
+msgid "Animated selection borders"
+msgstr ""
+
+msgid "Border color 1:"
+msgstr ""
+
+msgid "Border color 2:"
+msgstr ""
+
 msgid "Only custom preset can be modified"
 msgstr "Bare egendefinerte forhåndsinnstillinger kan endres"
 
@@ -1007,8 +1074,17 @@ msgstr "Overskriver en farge i stedet for å blande den. Dette valget gjelder ba
 msgid "Pixel Perfect"
 msgstr "Pikselperfekt"
 
+msgid "Fill inside"
+msgstr ""
+
 msgid "Makes lines smooth by removing the extra pixels on the edges"
 msgstr "Gjør linjer glatte ved å fjerne ekstra piksler på kantene"
+
+msgid "Fill Shape"
+msgstr ""
+
+msgid "Fills the drawn shape with color, instead of drawing a hollow shape"
+msgstr ""
 
 msgid "Brush color from"
 msgstr "Børstefarge fra"
@@ -1509,8 +1585,8 @@ msgstr "Viskelær"
 msgid "Bucket"
 msgstr "Bøtte"
 
-msgid "Lighten/Darken"
-msgstr "Lys opp/Formørk"
+msgid "Shading Tool"
+msgstr ""
 
 msgid "Switch Colors"
 msgstr "Bytt Farger"
@@ -1620,5 +1696,38 @@ msgid "Tiled In X Axis"
 msgstr ""
 
 msgid "Tiled In Y Axis"
+msgstr ""
+
+msgid "Create a new palette"
+msgstr ""
+
+msgid "Comment:"
+msgstr ""
+
+msgid "Empty"
+msgstr ""
+
+msgid "From Current Palette"
+msgstr ""
+
+msgid "From Current Sprite"
+msgstr ""
+
+msgid "From Current Selection"
+msgstr ""
+
+msgid "Add a new color"
+msgstr ""
+
+msgid "Remove a selected color"
+msgstr ""
+
+msgid "Palette with the same name and path already exists!"
+msgstr ""
+
+msgid "Palette name is required!"
+msgstr ""
+
+msgid "Reducing palette size will reset positions of colors. Colors that don't fit in new palette size will be lost!"
 msgstr ""
 

@@ -66,22 +66,19 @@ func set_pixel_perfect(value: bool) -> void:
 		drawers = [simple_drawer, simple_drawer, simple_drawer, simple_drawer]
 
 
-func set_pixel(image: Image, position: Vector2, color: Color) -> void:
+func set_pixel(image: Image, position: Vector2, color: Color, ignore_mirroring := false) -> void:
 	var project : Project = Global.current_project
 	drawers[0].set_pixel(image, position, color, color_op)
+	if ignore_mirroring:
+		return
 
 	# Handle Mirroring
 	var mirror_x = project.x_symmetry_point - position.x
 	var mirror_y = project.y_symmetry_point - position.y
-	var mirror_x_inside : bool
-	var mirror_y_inside : bool
-	mirror_x_inside = project.can_pixel_get_drawn(Vector2(mirror_x, position.y))
-	mirror_y_inside = project.can_pixel_get_drawn(Vector2(position.x, mirror_y))
 
-
-	if horizontal_mirror and mirror_x_inside:
+	if horizontal_mirror and project.can_pixel_get_drawn(Vector2(mirror_x, position.y)):
 		drawers[1].set_pixel(image, Vector2(mirror_x, position.y), color, color_op)
-		if vertical_mirror and mirror_y_inside:
+		if vertical_mirror and project.can_pixel_get_drawn(Vector2(position.x, mirror_y)):
 			drawers[2].set_pixel(image, Vector2(mirror_x, mirror_y), color, color_op)
-	if vertical_mirror and mirror_y_inside:
+	if vertical_mirror and project.can_pixel_get_drawn(Vector2(position.x, mirror_y)):
 		drawers[3].set_pixel(image, Vector2(position.x, mirror_y), color, color_op)

@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
-"PO-Revision-Date: 2021-03-17 17:35\n"
+"PO-Revision-Date: 2021-06-30 00:48\n"
 
 msgid "OK"
 msgstr "确定"
@@ -30,6 +30,9 @@ msgstr "确认..."
 msgid "File Name:"
 msgstr "文件名称:"
 
+msgid "Project Name:"
+msgstr "项目名称："
+
 msgid "Image Size"
 msgstr "图像大小"
 
@@ -38,6 +41,9 @@ msgstr "画布尺寸"
 
 msgid "Frame Size"
 msgstr "帧大小"
+
+msgid "Size:"
+msgstr "尺寸："
 
 msgid "Width:"
 msgstr "宽度:"
@@ -53,6 +59,9 @@ msgstr "文件"
 
 msgid "Edit"
 msgstr "编辑"
+
+msgid "Select"
+msgstr "选择"
 
 msgid "View"
 msgstr "视图"
@@ -123,6 +132,9 @@ msgstr "粘贴"
 msgid "Delete"
 msgstr "删除"
 
+msgid "New Brush"
+msgstr "新建画笔"
+
 msgid "Scale Image"
 msgstr "缩放图像"
 
@@ -144,8 +156,11 @@ msgstr "集成图像"
 msgid "Rotate Image"
 msgstr "旋转图像"
 
-msgid "Clear Selection"
-msgstr "清除选择"
+msgid "Clear"
+msgstr "清除"
+
+msgid "Invert"
+msgstr "反向"
 
 msgid "Flip"
 msgstr "翻转"
@@ -254,6 +269,12 @@ msgstr "垂直帧："
 
 msgid "Start frame:"
 msgstr "开始帧："
+
+msgid "At frame:"
+msgstr "在帧："
+
+msgid "At layer:"
+msgstr "在图层："
 
 msgid "Brush type:"
 msgstr "画笔类型："
@@ -413,6 +434,9 @@ msgstr "主题"
 msgid "Canvas"
 msgstr "画布"
 
+msgid "Selection"
+msgstr "选区"
+
 msgid "Shortcuts"
 msgstr "快捷键"
 
@@ -459,7 +483,7 @@ msgid "Display Scale"
 msgstr "显示缩放"
 
 msgid "Dim interface on dialog popup"
-msgstr ""
+msgstr "对话框弹出时变暗界面"
 
 msgid "Dark"
 msgstr "深色"
@@ -479,8 +503,29 @@ msgstr "白色"
 msgid "Purple"
 msgstr "紫色"
 
+msgid "Theme"
+msgstr "主题"
+
+msgid "Icon color from:"
+msgstr "图标颜色从："
+
+msgid "Icon color:"
+msgstr "图标颜色："
+
+msgid "Tool button size:"
+msgstr "工具按钮大小："
+
+msgid "Small"
+msgstr "小"
+
+msgid "Big"
+msgstr "大"
+
 msgid "Only affect selection"
 msgstr "仅影响所选"
+
+msgid "Selected cels"
+msgstr "所选单元格"
 
 msgid "Current cel"
 msgstr "当前单元格"
@@ -668,7 +713,7 @@ msgstr "阿拉伯语"
 msgid "Turkish"
 msgstr "土耳其语"
 
-msgid "Norwegian"
+msgid "Norwegian Bokmål"
 msgstr "挪威语"
 
 msgid "Korean"
@@ -682,6 +727,9 @@ msgstr "罗马尼亚文"
 
 msgid "Japanese"
 msgstr "日文"
+
+msgid "Ukrainian"
+msgstr "乌克兰语"
 
 msgid "Development Team"
 msgstr "开发团队"
@@ -728,17 +776,56 @@ msgstr "保存并退出"
 msgid "Exit without saving"
 msgstr "退出且不保存"
 
-msgid "Utility Tools"
-msgstr "实用工具"
-
 msgid "Rectangular Selection\n\n"
 "%s for left mouse button\n"
-"%s for right mouse button\n\n"
-"Press %s to move the content"
-msgstr "矩形选择\n\n"
-"%s 为鼠标左键\n"
-"%s 为鼠标右键\n\n"
-"按 %s 键移动内容"
+"%s for right mouse button"
+msgstr "矩形选区\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键"
+
+msgid "Elliptical Selection\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr "椭圆选区\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键"
+
+msgid "Polygonal Selection\n"
+"Double-click to connect the last point to the starting point\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr "多边形选区\n"
+"双击将最后一个点连接到起点\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键"
+
+msgid "Select By Color\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr "按颜色选择\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键"
+
+msgid "Magic Wand\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr "魔棒\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键"
+
+msgid "Lasso / Free Select Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr "套索/自由选择工具\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键"
+
+msgid "Move\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button"
+msgstr "移动\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键"
 
 msgid "Zoom\n\n"
 "%s for left mouse button\n"
@@ -762,9 +849,6 @@ msgstr "拾色器\n"
 "从子画面像素选择颜色\n\n"
 "%s 为鼠标左键\n"
 "%s 为鼠标右键"
-
-msgid "Draw Tools"
-msgstr "绘图工具"
 
 msgid "Pencil\n\n"
 "%s for left mouse button\n"
@@ -791,12 +875,57 @@ msgstr "油漆桶\n\n"
 "%s 为鼠标左键\n"
 "%s 为鼠标右键"
 
-msgid "Lighten/Darken\n\n"
+msgid "Shading Tool\n\n"
 "%s for left mouse button\n"
 "%s for right mouse button"
-msgstr "变淡/加深\n\n"
-"%s 为鼠标左键\n"
-"%s 为鼠标右键"
+msgstr "阴影工具\n\n"
+"%s 鼠标左键\n"
+"%s 鼠标右键"
+
+msgid "Line Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to snap the angle of the line\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin"
+msgstr "线条工具\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键\n\n"
+"按住 %s 捕捉线的角度\n"
+"按住 %s 使形状在单击原点居中\n"
+"按住 %s 移动形状的原点"
+
+msgid "Rectangle Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to create a 1:1 shape\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin"
+msgstr "矩形工具\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键\n\n"
+"按住 %s 创建一个 1:1 的形状\n"
+"按住 %s 使形状在单击原点居中\n"
+"按住 %s 移动形状的原点"
+
+msgid "Ellipse Tool\n\n"
+"%s for left mouse button\n"
+"%s for right mouse button\n\n"
+"Hold %s to create a 1:1 shape\n"
+"Hold %s to center the shape on the click origin\n"
+"Hold %s to displace the shape's origin"
+msgstr "椭圆工具\n\n"
+"%s 用于鼠标左键\n"
+"%s 用于鼠标右键\n\n"
+"按住 %s 创建一个 1:1 的形状\n"
+"按住 %s 使形状在单击原点居中\n"
+"按住 %s 移动形状的原点"
+
+msgid "Rectangle"
+msgstr "矩形工具"
+
+msgid "Ellipse"
+msgstr "椭圆工具"
 
 msgid "Choose a color for the left tool"
 msgstr "选择左键工具颜色"
@@ -965,6 +1094,15 @@ msgstr "跟随画布缩放级别"
 msgid "The transparent checker follow the zoom level of canvas"
 msgstr "透明检查器跟随画布缩放级别"
 
+msgid "Animated selection borders"
+msgstr "动画选择边框"
+
+msgid "Border color 1:"
+msgstr "边框颜色 1："
+
+msgid "Border color 2:"
+msgstr "边框颜色 2："
+
 msgid "Only custom preset can be modified"
 msgstr "仅修改自定义预设"
 
@@ -1010,8 +1148,17 @@ msgstr "覆盖颜色而不是混合颜色。 此选项仅与不完全不透明�
 msgid "Pixel Perfect"
 msgstr "平滑像素"
 
+msgid "Fill inside"
+msgstr "内部填充"
+
 msgid "Makes lines smooth by removing the extra pixels on the edges"
 msgstr "通过去除边缘上多余的像素使线条平滑"
+
+msgid "Fill Shape"
+msgstr "填充形状"
+
+msgid "Fills the drawn shape with color, instead of drawing a hollow shape"
+msgstr "用颜色填充绘制的形状，而不是绘制空心形状"
 
 msgid "Brush color from"
 msgstr "画笔颜色从"
@@ -1496,6 +1643,24 @@ msgstr "自定义"
 msgid "Rectangular Selection"
 msgstr "矩形选区"
 
+msgid "Elliptical Selection"
+msgstr "椭圆选区"
+
+msgid "Polygonal Selection"
+msgstr "多边形选区"
+
+msgid "Select By Color"
+msgstr "按颜色选择"
+
+msgid "Magic Wand"
+msgstr "魔棒"
+
+msgid "Lasso / Free Select Tool"
+msgstr "套索/自由选择工具"
+
+msgid "Move"
+msgstr "移动"
+
 msgid "Zoom"
 msgstr "缩放"
 
@@ -1514,8 +1679,17 @@ msgstr "橡皮擦"
 msgid "Bucket"
 msgstr "存储桶"
 
-msgid "Lighten/Darken"
-msgstr "亮色/暗色"
+msgid "Shading Tool"
+msgstr "阴影工具"
+
+msgid "Line Tool"
+msgstr "线条工具"
+
+msgid "Rectangle Tool"
+msgstr "矩形工具"
+
+msgid "Ellipse Tool"
+msgstr "椭圆工具"
 
 msgid "Switch Colors"
 msgstr "切换颜色"
@@ -1625,4 +1799,37 @@ msgstr "在 X 轴上平移"
 
 msgid "Tiled In Y Axis"
 msgstr "在 Y 轴上平移"
+
+msgid "Create a new palette"
+msgstr "创建一个新的调色板"
+
+msgid "Comment:"
+msgstr "注释："
+
+msgid "Empty"
+msgstr "空的"
+
+msgid "From Current Palette"
+msgstr "从当前调色板"
+
+msgid "From Current Sprite"
+msgstr "从当前 Sprite"
+
+msgid "From Current Selection"
+msgstr "从当前选择"
+
+msgid "Add a new color"
+msgstr "添加一个新颜色"
+
+msgid "Remove a selected color"
+msgstr "删除所选颜色"
+
+msgid "Palette with the same name and path already exists!"
+msgstr "具有相同名称和路径的调色板已经存在！"
+
+msgid "Palette name is required!"
+msgstr "调色板名称为必填项！"
+
+msgid "Reducing palette size will reset positions of colors. Colors that don't fit in new palette size will be lost!"
+msgstr "减小调色板尺寸将重置颜色的位置。不适合新调色板尺寸的颜色将丢失！"
 

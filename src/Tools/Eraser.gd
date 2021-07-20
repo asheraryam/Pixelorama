@@ -24,7 +24,7 @@ func _init() -> void:
 
 
 func draw_start(position : Vector2) -> void:
-	Global.canvas.selection.move_content_confirm()
+	Global.canvas.selection.transform_content_confirm()
 	update_mask()
 	_changed = false
 	_drawer.color_op.changed = false
@@ -68,9 +68,12 @@ func draw_end(_position : Vector2) -> void:
 	update_random_image()
 
 
-func _draw_brush_image(_image : Image, src_rect: Rect2, dst: Vector2) -> void:
+func _draw_brush_image(image : Image, src_rect: Rect2, dst: Vector2) -> void:
 	_changed = true
-	var size := _image.get_size()
+	var size := image.get_size()
 	if _clear_image.get_size() != size:
 		_clear_image.resize(size.x, size.y, Image.INTERPOLATE_NEAREST)
-	_get_draw_image().blit_rect_mask(_clear_image, _image, src_rect, dst)
+
+	var images := _get_selected_draw_images()
+	for draw_image in images:
+		draw_image.blit_rect_mask(_clear_image, image, src_rect, dst)
